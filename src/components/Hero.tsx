@@ -8,11 +8,9 @@ const HERO_IMAGE =
 export function Hero() {
   return (
     <section
-      id="accueil"
       className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden sm:min-h-[90vh]"
       aria-labelledby="hero-title"
     >
-      {/* Background image */}
       <Image
         src={HERO_IMAGE}
         alt="Intérieur premium d'un barbershop"
@@ -21,14 +19,8 @@ export function Hero() {
         className="object-cover"
         sizes="100vw"
       />
+      <div className="absolute inset-0 bg-[#1a1a1a]/70" aria-hidden />
 
-      {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-[#1a1a1a]/70"
-        aria-hidden
-      />
-
-      {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24">
         <h1
           id="hero-title"
@@ -41,7 +33,7 @@ export function Hero() {
           ambiance premium.
         </p>
         <Link
-          href="#contact"
+          href="/contact"
           className="inline-flex items-center gap-2 rounded-md bg-[#d4af37] px-6 py-3 text-base font-semibold text-[#1a1a1a] shadow-lg transition-all hover:bg-[#c4a02e] hover:shadow-[#d4af37]/30 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-[#1a1a1a] sm:px-8 sm:py-4 sm:text-lg"
         >
           <CalendarIcon className="size-5 sm:size-6" />

@@ -38,11 +38,12 @@ const SERVICES = [
   },
 ];
 
-export function Services() {
+type ServicesProps = { title?: string };
+
+export function Services({ title = "Nos Services" }: ServicesProps) {
   return (
     <section
-      id="services"
-      className="scroll-mt-20 bg-[#e8e8e8] py-16 sm:py-20 lg:py-24"
+      className="bg-[#e8e8e8] py-16 sm:py-20 lg:py-24"
       aria-labelledby="services-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -50,7 +51,7 @@ export function Services() {
           id="services-title"
           className="font-heading mb-12 text-center text-3xl font-bold tracking-tight text-[#1a1a1a] sm:text-4xl"
         >
-          Nos Services
+          {title}
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map(({ title, price, description, Icon }) => (

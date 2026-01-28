@@ -1,23 +1,17 @@
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { Expertise } from "@/components/Expertise";
-import { Gallery } from "@/components/Gallery";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
+import { HomeCTA } from "@/components/HomeCTA";
 
-export default function Home() {
+export const metadata = {
+  title: "ROYAL BARBER | Barbier Premium",
+  description:
+    "L'excellence du coiffeur homme. Coupe classique, barbe soignée et ambiance premium. Prenez rendez-vous.",
+};
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#f5f5f5]">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <Expertise />
-        <Gallery />
-        <Contact />
-        <Footer />
-      </main>
+    <div>
+      <Hero />
+      <HomeCTA />
     </div>
   );
 }
