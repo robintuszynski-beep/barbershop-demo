@@ -6,65 +6,70 @@ import Image from "next/image";
 type Category = "toutes" | "coupes" | "barbes" | "styles";
 
 const GALLERY: { src: string; alt: string; category: Category }[] = [
+  // COUPES - Images de coupes de cheveux masculines
+  {
+    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
+    alt: "Coupe moderne en action",
+    category: "coupes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?w=600&q=80",
+    alt: "Coupe au salon",
+    category: "coupes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1654097800183-574ba7368f74?w=600&q=80",
+    alt: "Coupe stylée",
+    category: "coupes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1593702288056-7927b442d0fa?w=600&q=80",
+    alt: "Coupe professionnelle",
+    category: "coupes",
+  },
+  
+  // BARBES - Images de taille/entretien de barbe
+  {
+    src: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&q=80",
+    alt: "Taille de barbe précise",
+    category: "barbes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1654097803253-d481b6751f29?w=600&q=80",
+    alt: "Entretien barbe",
+    category: "barbes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1743779035881-9205ef92f1ce?w=600&q=80",
+    alt: "Rasage tondeuse",
+    category: "barbes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1599351431618-317f6a5f9a6b?w=600&q=80",
+    alt: "Soin de barbe",
+    category: "barbes",
+  },
+  
+  // SALON - Intérieur barbershop, fauteuils, ambiance
   {
     src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80",
-    alt: "Barbershop",
-    category: "coupes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
-    alt: "Coupe",
-    category: "coupes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
-    alt: "Style",
+    alt: "Ambiance barbershop classique",
     category: "styles",
   },
   {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80",
-    alt: "Barbe",
-    category: "barbes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1605499461357-ed26c536969c?w=600&q=80",
-    alt: "Coupe homme",
-    category: "coupes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
-    alt: "Barbier",
-    category: "barbes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1622287162716-f311bad1e2f9?w=600&q=80",
-    alt: "Salon",
+    src: "https://images.unsplash.com/photo-1621645582931-d1d3e6564943?w=600&q=80",
+    alt: "Fauteuil professionnel",
     category: "styles",
   },
   {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
-    alt: "Rasage",
-    category: "barbes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80",
-    alt: "Ambiance",
+    src: "https://images.unsplash.com/photo-1592647420148-bfcc177e2117?w=600&q=80",
+    alt: "Salon moderne",
     category: "styles",
   },
   {
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
-    alt: "Coupe moderne",
-    category: "coupes",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
-    alt: "Détails",
+    src: "https://images.unsplash.com/photo-1549271568-e87e07c5406b?w=600&q=80",
+    alt: "Outils de barbier",
     category: "styles",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80",
-    alt: "Taille barbe",
-    category: "barbes",
   },
 ];
 
@@ -72,7 +77,7 @@ const CATEGORIES: { id: Category; label: string }[] = [
   { id: "toutes", label: "Toutes" },
   { id: "coupes", label: "Coupes" },
   { id: "barbes", label: "Barbes" },
-  { id: "styles", label: "Styles" },
+  { id: "styles", label: "Salon" },
 ];
 
 export function GalleryPage() {

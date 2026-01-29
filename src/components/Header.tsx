@@ -106,23 +106,27 @@ export function Header() {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed inset-y-0 right-0 z-40 w-full max-w-sm transform bg-[#1a1a1a] shadow-xl transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed inset-y-0 right-0 z-40 w-full transform shadow-2xl transition-transform duration-300 ease-out md:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ 
+          backgroundColor: '#000000',
+          borderLeft: '2px solid #d4af37'
+        }}
         aria-hidden={!mobileOpen}
       >
-        <div className="flex h-16 items-center justify-end px-4 sm:h-20">
+        <div className="flex h-16 items-center justify-end bg-black px-4 sm:h-20">
           <button
             type="button"
             onClick={() => setMobileOpen(false)}
-            className="flex size-10 items-center justify-center rounded-md text-[#f5f5f5] hover:bg-white/10"
+            className="flex size-10 items-center justify-center rounded-md text-[#f5f5f5] hover:bg-[#d4af37]/30"
             aria-label="Fermer le menu"
           >
             <XIcon />
           </button>
         </div>
         <nav
-          className="flex flex-col gap-1 px-6 py-4"
+          className="flex flex-col gap-1 bg-black px-6 py-4"
           aria-label="Navigation mobile"
         >
           {NAV_LINKS.map(({ label, href }) => (
@@ -132,7 +136,7 @@ export function Header() {
               label={label}
               isActive={pathname === href}
               onClick={() => setMobileOpen(false)}
-              className="rounded-lg px-4 py-3 text-lg hover:bg-[#d4af37]/20"
+              className="rounded-lg px-4 py-3 text-lg hover:bg-[#d4af37]/30"
             />
           ))}
         </nav>
